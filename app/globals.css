@@ -38,9 +38,9 @@
  
 @layer base {
   * {
-    @apply border-border;
+    @apply min-w-0 border-border;
   }
   body {
-    @apply bg-background text-foreground max-w-screen-2xl mx-auto; 
+    @apply bg-background text-foreground max-w-screen-2xl mx-12 2xl:mx-auto; 
   }
 }
