@@ -52,6 +52,7 @@ export function HomeHeader() {
                     src='/screenshots/server-list.webp'
                     alt={'Server List'}
                     className='-mr-20 mt-8'
+                    loading="eager"
                     width={1920}
                     height={1080}
                 />
