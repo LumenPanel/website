@@ -2,7 +2,7 @@
 
 import { cn } from '@/lib/utils';
 
-import logo from '@/public/logo.svg';
+import logo from '@/public/logo-text.svg';
 import { Key } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -16,16 +16,14 @@ export function NavBar() {
 
     return (
         <div className='bg-card fixed top-0 right-0 left-0 border-b w-full mr-4 z-50'>
-            <div className=' max-w-screen-2xl flex my-2 mx-4 2xl:mx-auto flex-grow justify-between items-center'>
+            <div className=' max-w-screen-xl flex my-2 mx-4 xl:mx-auto flex-grow justify-between items-center'>
                 <div className='flex items-center space-x-2'>
                     <Link
                         href='/'
                         className='ml-4 md:ml-0 mr-6 flex items-center space-x-2 hover:opacity-75 duration-75'
                     >
-                        <Image height={24} alt='Logo' width={24} src={logo} />
-                        <span className='hidden font-bold md:inline-block'>
-                            Lumen
-                        </span>
+                        <Image height={24} alt='Logo' width={80} src={logo} />
+
                     </Link>
                     <nav className='flex items-center gap-6 text-sm'>
                         <Link
@@ -65,7 +63,7 @@ export function NavBar() {
                 </div>
                 <div>
                     <Button>
-                        <span className='hidden md:block'>Manage license</span>
+                        <span className='hidden md:block'>Manage licenses</span>
                         <Key className='md:hidden' />
                     </Button>
                 </div>

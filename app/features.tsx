@@ -5,17 +5,28 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 import FadeIn from '@/components/fade-in';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 export default function Features() {
     const [textIndex, setTextIndex] = useState(0);
     const texts = ['servers', 'files', 'configuration', 'clients', 'plans'];
+
     useEffect(() => {
         const interval = setInterval(() => {
             setTextIndex((prev) => (prev + 1) % texts.length);
         }, 2000);
         return () => clearInterval(interval);
     }, []);
+
     return (
         <section id='features' className='mt-24 select-none'>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
@@ -61,21 +72,21 @@ export default function Features() {
                     </Card>
                 </FadeIn>
                 <FadeIn className='lg:col-span-2'>
-                    <Card className='h-72  overflow-hidden'>
+                    <Card className='h-72 overflow-hidden'>
                         <CardContent>
                             <CardHeader>
-                                <CardTitle className='text-2xl'>
-                                    Easily manage your{' '}
+                                <CardTitle className='text-xl lg:text-2xl inline-flex -ml-6 gap-2'>
+                                    Easily manage your
                                     <AnimatePresence mode='wait'>
-                                        <motion.span
+                                        <motion.div
                                             key={textIndex}
-                                            initial={{ y: 10, opacity: 0 }}
-                                            animate={{ y: 0, opacity: 1 }}
-                                            exit={{ y: -10, opacity: 0 }}
+                                            initial={{ opacity: 0, y: 5 }}
+                                            exit={{ opacity: 0, y: -5 }}
+                                            animate={{ opacity: 1, y: 0 }}
                                             transition={{ duration: 0.4 }}
                                         >
                                             {texts[textIndex]}
-                                        </motion.span>
+                                        </motion.div>
                                     </AnimatePresence>
                                 </CardTitle>
                             </CardHeader>
@@ -86,21 +97,52 @@ export default function Features() {
                     <Card className='h-72  overflow-hidden'>
                         <CardHeader>
                             <CardTitle className='text-2xl'>
-                                Internationalization built in
+                                Multiple languages built-in
                             </CardTitle>
                         </CardHeader>
+                        <CardContent>
+                            <Tabs defaultValue='english' className='w-full'>
+                                <TabsList className='grid w-full grid-cols-3 -mt-3.5'>
+                                    <TabsTrigger value='english'>
+                                        English
+                                    </TabsTrigger>
+                                    <TabsTrigger value='polish'>
+                                        Polski
+                                    </TabsTrigger>
+                                    <TabsTrigger value='spanish'>
+                                        Español
+                                    </TabsTrigger>
+                                </TabsList>
+                                <TabsContent value='english'>
+                                    <div className='mx-auto px-6 lg:px-8'>
+                                        <Image
+                                            src='/screenshots/top-up.webp'
+                                            className=''
+                                            alt={''}
+                                            height={637}
+                                            width={1095}
+                                        />
+                                        <div
+                                            className='relative'
+                                            aria-hidden='true'
+                                        >
+                                            <div className='absolute -inset-x-5 bottom-0 bg-gradient-to-t from-background pt-[8%]' />
+                                        </div>
+                                    </div>
+                                </TabsContent>
+                            </Tabs>
+                        </CardContent>
                     </Card>
                 </FadeIn>
                 <FadeIn>
                     <Card className='h-72  overflow-hidden'>
                         <CardHeader>
                             <CardTitle className='text-2xl'>
-                                Built in support for the most popular payment
-                                gateways
+                                Support for the most popular payment gateways
                             </CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <div className='mx-autopx-6 lg:px-8'>
+                            <div className='mx-auto px-6 lg:px-8'>
                                 <Image
                                     src='/screenshots/top-up.webp'
                                     className=''
