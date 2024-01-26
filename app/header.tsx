@@ -52,8 +52,8 @@ export function HomeHeader() {
                     src='/screenshots/server-list.webp'
                     alt={'Server List'}
                     className='-mr-20 mt-8'
-                    width={3840 / 5}
-                    height={2134 / 5}
+                    width={1920}
+                    height={1080}
                 />
             </section>
         </FadeUp>
