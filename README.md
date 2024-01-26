@@ -13,6 +13,7 @@
 This site is built with NextJS. Documentation content is written in Markdown format located in the `docs` folder. For simple edits, you can directly edit the file on GitHub.
 
 For local development, download the dependencies and run it via PNPM:
+
 ```
 pnpm install
 pnpm run dev
