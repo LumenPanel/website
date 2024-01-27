@@ -5,12 +5,9 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 import FadeIn from '@/components/fade-in';
-import { Button } from '@/components/ui/button';
 import {
     Card,
     CardContent,
-    CardDescription,
-    CardFooter,
     CardHeader,
     CardTitle,
 } from '@/components/ui/card';
@@ -25,7 +22,7 @@ export default function Features() {
             setTextIndex((prev) => (prev + 1) % texts.length);
         }, 2000);
         return () => clearInterval(interval);
-    }, []);
+    });
 
     return (
         <section id='features' className='mt-24 select-none'>
@@ -145,8 +142,7 @@ export default function Features() {
                             <div className='mx-auto px-6 lg:px-8'>
                                 <Image
                                     src='/screenshots/top-up.webp'
-                                    className=''
-                                    alt={''}
+                                    alt={'Top Up account form'}
                                     height={637}
                                     width={1095}
                                 />
