@@ -10,7 +10,7 @@ import {
 export function PricingHeader() {
     return (
         <FadeUp>
-            <PageHeader className='*:text-center mx-auto *:mx-auto'>
+            <PageHeader className='*:text-center mx-auto mt-10  *:mx-auto'>
                 <PageHeaderHeading>Pricing</PageHeaderHeading>
                 <PageHeaderDescription>
                     Choose the right plan for your hostings needs!
