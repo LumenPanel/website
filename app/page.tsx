@@ -4,7 +4,7 @@ import { HomeHeader } from './header';
 export default function Home() {
     return (
         <main>
-            <HomeHeader/>
+            <HomeHeader />
             <Features />
         </main>
     );

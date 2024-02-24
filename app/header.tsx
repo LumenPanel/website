@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { cn } from '@/lib/utils';
 
@@ -19,7 +19,7 @@ export function HomeHeader() {
     return (
         <FadeUp>
             <section className='lg:flex items-center mt-16 mx-2'>
-                <PageHeader className='flex-grow mt-4'>
+                <PageHeader className='flex-grow min-w-96 mt-4'>
                     <PageHeaderHeading className='max-w-3xl'>
                         Server Management
                         <br />
@@ -51,10 +51,10 @@ export function HomeHeader() {
                 <Image
                     src='/screenshots/server-list.webp'
                     alt={'Server List'}
-                    className='-mr-20 mt-8'
-                    loading="eager"
-                    width={1920}
-                    height={1080}
+                    className='mt-8 -mr-20'
+                    loading='eager'
+                    width={1920 / 2}
+                    height={1080 / 2}
                 />
             </section>
         </FadeUp>
