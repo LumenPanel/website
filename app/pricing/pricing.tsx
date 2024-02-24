@@ -1,5 +1,8 @@
 'use client';
 
+import Link from 'next/link';
+
+import FadeIn from '@/components/fade-in';
 import { Button } from '@/components/ui/button';
 import {
     Card,
@@ -8,12 +11,10 @@ import {
     CardHeader,
     CardTitle,
 } from '@/components/ui/card';
-import FadeIn from '@/components/fade-in';
-import Link from 'next/link';
 
 export function PricingCards() {
     return (
-        <FadeIn className='grid xl:grid-cols-3 gap-4 max-w-screen-xl mx-auto'>
+        <FadeIn className='grid xl:grid-cols-3 gap-4 max-w-screen-lg mx-auto'>
             <Card>
                 <CardHeader className='space-y-4'>
                     <CardTitle>Non-commercial</CardTitle>

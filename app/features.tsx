@@ -5,12 +5,7 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 import FadeIn from '@/components/fade-in';
-import {
-    Card,
-    CardContent,
-    CardHeader,
-    CardTitle,
-} from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 export default function Features() {
@@ -86,6 +81,7 @@ export default function Features() {
                                         </motion.div>
                                     </AnimatePresence>
                                 </CardTitle>
+                                <CardContent>W.I.P</CardContent>
                             </CardHeader>
                         </CardContent>
                     </Card>
@@ -112,19 +108,7 @@ export default function Features() {
                                 </TabsList>
                                 <TabsContent value='english'>
                                     <div className='mx-auto px-6 lg:px-8'>
-                                        <Image
-                                            src='/screenshots/top-up.webp'
-                                            className=''
-                                            alt={''}
-                                            height={637}
-                                            width={1095}
-                                        />
-                                        <div
-                                            className='relative'
-                                            aria-hidden='true'
-                                        >
-                                            <div className='absolute -inset-x-5 bottom-0 bg-gradient-to-t from-background pt-[8%]' />
-                                        </div>
+                                        <CardContent>W.I.P</CardContent>
                                     </div>
                                 </TabsContent>
                             </Tabs>
@@ -160,24 +144,7 @@ export default function Features() {
                                 User experience as a top priority
                             </CardTitle>
                         </CardHeader>
-                        <CardContent>
-                            <video
-                                width='100'
-                                height='60'
-                                loop
-                                autoPlay
-                                muted
-                                preload='none'
-                                controls={false}
-                                className='rounded-lg shadow-lg -mt-3.5'
-                            >
-                                <source
-                                    src='/videos/ux.webm'
-                                    type='video/webm'
-                                />
-                                Your browser does not support this video
-                            </video>
-                        </CardContent>
+                        <CardContent>W.I.P</CardContent>
                     </Card>
                 </FadeIn>
             </div>
